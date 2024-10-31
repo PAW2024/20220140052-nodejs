@@ -1,7 +1,9 @@
 const express = require('express'); // Mengimport express
 const app = express();
-const todoRouters = require('./routes/todo.js');
-const port = 3000;
+// const todoRouters = require('./routes/todo.js'); //server
+const todoRouters = require('./routes/tododb.js'); // lokal
+require('dotenv').config();
+const port = process.env.PORT;
 
 app.use(express.json());
 
