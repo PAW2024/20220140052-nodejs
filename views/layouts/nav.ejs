@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <!-- Gambar logo di navbar -->
+        <a class="navbar-brand" href="/">
+            <img src="/images/logo.png" alt="Website Logo" style="height: 40px;">
+        </a>
+
+        <!-- Tombol untuk toggle navbar pada layar kecil -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Item navbar yang dapat mengubah tampilan pada layar kecil -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link <%= showNavbar && currentPage === 'home' ? 'active' : '' %>" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link <%= showNavbar && currentPage === 'todo' ? 'active' : '' %>" href="/todo-view">Todo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link <%= showNavbar && currentPage === 'contact' ? 'active' : '' %>" href="/contact">Contact</a>
+                </li>
+                <!-- Tombol logout di pojok kanan dengan ikon -->
+                <li class="nav-item ms-auto">
+                    <form action="/logout" method="POST" class="d-inline">
+                        <button class="btn btn-link nav-link" type="submit">
+                            <i class="fas fa-sign-out-alt logout-icon"></i> Logout
+                        </button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

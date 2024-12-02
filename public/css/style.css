@@ -1,0 +1,186 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0; /* Menghapus margin pada body */
+}
+
+.container {
+    flex-grow: 1;
+    padding: 100px;
+    margin-top: 20px; /* Untuk memberi jarak dari navbar */
+}
+
+
+/* Form Styles */
+.input-group {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.input-group-append {
+    background-color: #007BFF;
+}
+
+input[type="text"] {
+    border-radius: 5px 0 0 5px;
+    padding: 10px;
+    font-size: 1.1em;
+}
+
+button {
+    border-radius: 0 5px 5px 0;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00b351;
+}
+
+/* Todo List - Grid Layout */
+#todoList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Todo Card Styles */
+.todo-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+
+.todo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+span.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.card-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Button Styles */
+.card-actions .btn {
+    font-size: 14px;
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+
+.card-actions .btn-warning {
+    background-color: #f0ad4e;
+    color: white;
+}
+
+.card-actions .btn-danger {
+    background-color: #d9534f;
+    color: white;
+}
+
+.card-actions .btn:hover {
+    opacity: 0.8;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #007BFF; /* Warna navbar */
+    padding: 10px 20px; /* Padding pada navbar */
+    border-radius: 0 0 10px 10px; /* Membuat ujung navbar melengkung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Memberikan bayangan pada navbar */
+}
+
+.navbar-brand {
+    font-size: 1.5em; /* Ukuran font untuk brand */
+    font-weight: bold; /* Membuat brand lebih tebal */
+    color: rgb(213, 73, 73);
+}
+
+.navbar-nav {
+    display: flex; /* Menggunakan flexbox untuk menata item navbar */
+    justify-content: center; /* Memusatkan item navbar */
+    margin-left: 0; /* Menghapus margin kiri */
+    width: 100%; /* Agar navbar-nav mengisi lebar penuh */
+}
+
+.nav-item {
+    padding-left: 15px; /* Memberikan jarak antara item navbar */
+    padding-right: 15px; /* Memberikan jarak antara item navbar */
+}
+
+.nav-link {
+    color: rgb(0, 0, 0); /* Warna link navbar */
+    font-size: 1.1em; /* Ukuran font untuk link */
+}
+
+.nav-link:hover {
+    color: #bd1818; /* Mengubah warna saat hover */
+}
+
+/* Styling for Active Navbar Item */
+.nav-item .active {
+    background-color: #ab402a; /* Background ketika item navbar aktif */
+    border-radius: 5px; /* Memberikan sudut melengkung pada item aktif */
+}
+
+/* Navbar-toggler Styling */
+.navbar-toggler {
+    border: none; /* Menghilangkan border pada tombol navbar */
+}
+
+.navbar-toggler-icon {
+    background-color: rgb(233, 16, 16); /* Ubah warna ikon toggle menjadi merah */
+}
+
+/* Pindahkan logout ke kanan */
+.navbar-nav.ml-auto {
+    margin-left: auto; /* Menggeser item logout ke sebelah kanan */
+}
+
+/* Logout button styling */
+.nav-item .btn-link:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Efek saat hover pada tombol logout */
+}
+
+/* Modal Styles */
+.modal-header {
+    background-color: #007BFF;
+    color: white;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.footer {
+    background-color: #f8f9fa;
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+    color: #777;
+}
